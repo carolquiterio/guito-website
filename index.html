@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guito</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;700&display=swap');
+
+        .landing-page,
+        .landing-page * {
+            box-sizing: border-box;
+        }
+
+        .landing-page {
+            background: var(--tsystem6, #fffaf3);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .frame-50 {
+            padding: 60px 32px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icone {
+            padding: 32px 21px 32px 21px;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .cone {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-shrink: 0;
+            width: 106px;
+            height: 111px;
+            position: relative;
+        }
+
+        .icone2 {
+            align-self: stretch;
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .layer-1 {
+            height: auto;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            overflow: visible;
+        }
+
+        .guito {
+            color: #000000;
+            text-align: left;
+            font-size: 44px;
+            line-height: 32px;
+            font-weight: 400;
+            position: relative;
+            font-family: 'Varela Round', sans-serif;
+        }
+
+        .fa-a-download-para-mac-os {
+            color: #000000;
+            text-align: left;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 26px;
+            line-height: 32px;
+            font-weight: 400;
+            position: relative;
+        }
+
+        .frame-57 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .guito-is-a-desktop-app-designed-to-streamline-your-git-workflow-empowering-you-to-effortlessly-manage-your-projects-with-ease-and-efficiency {
+            color: #000000;
+            text-align: center;
+            font-family: 'SF Pro Display', sans-serif;
+            font-size: var(--body-regular-font-size, 16px);
+            line-height: var(--body-regular-line-height, 16px);
+            font-weight: var(--body-regular-font-weight, 400);
+            position: relative;
+        }
+
+        .frame-58 {
+            padding: 16px 46px 16px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .button {
+            background: var(--accents-orange, #ff9500);
+            border-radius: 8px;
+            padding: 12px 18px 12px 18px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border-style: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .pull {
+            color: var(--white, #ffffff);
+            text-align: center;
+            font-family: 'SF Pro Display', sans-serif;
+            font-size: var(--title-3-emphasized-font-size, 15px);
+            line-height: var(--title-3-emphasized-line-height, 20px);
+            font-weight: var(--title-3-emphasized-font-weight, 600);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .frame-53 {
+            padding: 60px 32px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .elevate-your-git-experience-with-guito-your-ultimate-desktop-companion-for-seamless-version-control {
+            color: #000000;
+            text-align: center;
+            font-family: 'SF Pro Display', sans-serif;
+            font-size: var(--title-3-regular-font-size, 15px);
+            line-height: var(--title-3-regular-line-height, 20px);
+            font-weight: var(--title-3-regular-font-weight, 400);
+            position: relative;
+        }
+
+        .sidebar-and-content-area-with-toolbar-1 {
+            flex-shrink: 0;
+            max-width: 60%;
+            position: relative;
+            object-fit: cover;
+        }
+
+        .frame-52 {
+            padding: 60px 32px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .frame-56 {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .bota-o-branch {
+            flex-shrink: 0;
+            max-width: 30%;
+            position: relative;
+            object-fit: cover;
+        }
+
+        .frame-496 {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .branch-visualization-mastery {
+            color: #000000;
+            text-align: left;
+            font-family: 'Varela Round', sans-serif;
+            font-size: var(--title-1-regular-font-size, 22px);
+            line-height: var(--title-1-regular-line-height, 26px);
+            font-weight: var(--title-1-regular-font-weight, 400);
+            position: relative;
+        }
+
+        .explore-navigate-and-understand-your-project-s-branching-structure-effortlessly-with-guito-s-intuitive-branch-visualization-feature-gain-clarity-make-informed-decisions-and-enhance-collaboration-as-you-delve-into-the-intricate-pathways-of-your-git-repository {
+            color: #000000;
+            text-align: center;
+            font-family: "VarelaRound-Regular", sans-serif;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 400;
+            position: relative;
+            max-width: 288px;
+        }
+
+        .frame-572 {
+            display: flex;
+            flex-direction: row;
+            gap: 14px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .effortless-repository-management {
+            color: #000000;
+            text-align: left;
+            font-family: 'Varela Round', sans-serif;
+            font-size: var(--title-1-regular-font-size, 22px);
+            line-height: var(--title-1-regular-line-height, 26px);
+            font-weight: var(--title-1-regular-font-weight, 400);
+            position: relative;
+        }
+
+        .simplify-your-workflow-and-stay-organized-with-guito-s-repository-management-feature-easily-create-clone-and-manage-repositories-with-a-user-friendly-interface-seamlessly-switch-between-projects-and-repositories-keeping-your-development-journey-smooth-and-efficient {
+            color: #000000;
+            text-align: center;
+            font-family: 'SF Pro Display', sans-serif;
+            font-size: var(--body-regular-font-size, 16px);
+            line-height: var(--body-regular-line-height, 16px);
+            font-weight: var(--body-regular-font-weight, 400);
+            position: relative;
+            width: 288px;
+        }
+
+        .tela-inicial-full-screen {
+            flex-shrink: 0;
+            max-width: 30%;
+            position: relative;
+            object-fit: cover;
+        }
+
+        .frame-582 {
+            display: flex;
+            flex-direction: row;
+            gap: 14px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .screenshot-2024-03-27-at-10-04-1 {
+            flex-shrink: 0;
+            max-width: 30%;
+            position: relative;
+            object-fit: cover;
+        }
+
+        .streamlined-commit-push-pull {
+            color: #000000;
+            text-align: left;
+            font-family: 'Varela Round', sans-serif;
+            font-size: var(--title-1-regular-font-size, 22px);
+            line-height: var(--title-1-regular-line-height, 26px);
+            font-weight: var(--title-1-regular-font-weight, 400);
+            position: relative;
+        }
+
+        .accelerate-your-development-process-with-guito-s-streamlined-commit-push-and-pull-feature-effortlessly-commit-your-changes-push-them-to-your-remote-repository-and-pull-latest-updates-with-just-a-few-clicks-stay-focused-on-coding-while-guito-handles-the-rest-ensuring-your-workflow-remains-seamless-and-efficient {
+            color: #000000;
+            text-align: center;
+            font-family: 'SF Pro Display', sans-serif;
+            font-size: var(--body-regular-font-size, 16px);
+            line-height: var(--body-regular-line-height, 16px);
+            font-weight: var(--body-regular-font-weight, 400);
+            position: relative;
+            width: 288px;
+        }
+
+        .frame-54 {
+            padding: 60px 32px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            align-self: stretch;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        ._2024-guito-all-rights-reserved {
+            color: #000000;
+            text-align: center;
+            font-family: 'SF Pro Display', sans-serif;
+            font-size: var(--callout-regular-font-size, 14px);
+            line-height: var(--callout-regular-line-height, 15px);
+            font-weight: var(--callout-regular-font-weight, 400);
+            position: relative;
+        }
+
+        .link-span {
+            color: #FF9500;
+            font-size: 13px;
+            font-family: 'SF Pro Display';
+            font-weight: 700;
+            line-height: 16px;
+        }
+
+        .normal-span {
+            color: black;
+            font-size: 13px;
+            font-family: SF Pro;
+            font-weight: 400;
+            line-height: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="landing-page">
+        <div class="frame-50">
+            <div class="icone">
+                <div class="cone">
+                    <div class="icone2">
+                        <svg class="layer-1" width="106" height="111" viewBox="0 0 106 111" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M30.0651 22.9318C28.8744 25.1836 27.5812 27.3859 26.5177 29.6943C24.4295 34.2262 23.0303 38.9561 22.4473 43.9546C21.8077 49.441 21.9879 54.8248 23.6027 60.1274C24.6662 63.62 26.2527 66.8227 28.7967 69.5058C29.2772 70.0113 29.7542 70.379 29.7401 69.4068C29.6906 66.2112 31.2594 63.2948 31.0792 60.0461C30.9308 57.4054 30.4079 54.9874 29.2207 52.6437C29.0263 52.2619 27.2067 50.8161 29.6835 50.8691C29.7542 50.8691 29.9061 50.5969 29.8849 50.4697C29.7189 49.3844 30.0404 49.0132 31.111 49.5294C31.4007 49.6672 31.4184 49.3774 31.4926 49.144C31.8459 48.0199 32.1887 47.9846 33.0967 48.7835C34.4147 49.9465 34.3369 51.7812 35.2627 53.1245C35.2521 54.0613 35.1001 55.0263 35.2556 55.9348C35.9658 60.0531 35.0895 63.7296 32.5879 67.0914C31.8777 68.0459 31.8777 69.3538 32.1286 70.4956C32.3088 71.3193 32.8211 72.1394 33.8529 72.2101C34.4818 72.2525 34.7927 71.846 34.874 71.238C35.2839 68.0353 37.3155 65.6739 39.3719 63.521C41.446 61.347 44.3398 60.1945 47.3396 61.1702C50.1945 62.0999 52.7279 62.0646 55.2154 60.4243C57.1022 59.1765 58.8547 55.698 58.6039 53.1775C58.2258 49.3774 56.1341 45.9095 56.5934 41.9856C56.6005 41.929 56.4309 41.8548 56.2471 41.7169C55.6641 42.4699 55.2967 43.2511 55.2755 44.241C55.2331 46.2877 54.2296 48.0199 52.8622 49.3455C51.0708 51.0848 48.7317 50.5969 46.5764 50.0278C45.2726 49.6849 44.0147 49.2854 42.6438 49.3137C41.7746 49.3314 41.5025 49.7309 41.552 50.505C41.3294 50.505 41.1068 50.505 40.8807 50.505C40.81 50.1869 40.5874 50.0455 40.2871 50.0031C39.5521 49.6248 37.7501 50.6995 38.2731 48.5219C38.2907 48.4441 37.4074 48.0765 36.9198 47.9633C36.0789 47.7689 35.2167 47.6664 34.3511 47.5215C35.2061 45.6726 37.1106 44.8631 39.8454 45.2944C41.3647 45.5348 42.8664 45.5631 44.3787 45.3474C47.6965 44.8737 50.5337 43.3819 53.0318 41.1902C54.1377 40.3595 55.4097 40.2923 56.7453 40.1297C60.8511 39.6419 64.5469 38.2703 66.7977 34.41C69.0343 30.571 68.9707 26.9052 66.3348 23.2323C65.9603 22.7091 64.6918 22.1859 65.5398 21.09C71.4016 20.6764 75.9313 23.151 79.8533 27.347C82.627 30.3165 84.1958 33.9081 85.7469 37.5032C88.5418 43.9935 90.4922 50.7101 90.1177 57.9039C89.8739 62.609 88.6867 67.0702 86.7151 71.3405C82.1005 81.3305 74.3272 87.7042 63.9427 90.861C56.657 93.0774 49.2723 93.3567 42.2445 89.8817C38.6335 88.0966 34.6373 87.3224 31.1216 85.4488C26.1113 82.7763 21.8996 79.0787 19.451 73.815C15.8046 65.9814 15.4477 57.6882 16.4053 49.2607C17.3593 40.865 20.5781 33.3849 25.7121 26.7249C26.7756 25.3462 28.0935 24.169 29.2949 22.9C29.5528 22.9141 29.8143 22.9247 30.0722 22.9353L30.0651 22.9318Z"
+                                fill="#713303" />
+                            <path
+                                d="M65.5327 21.09C64.6847 22.1859 65.9532 22.7091 66.3277 23.2323C68.96 26.9052 69.0272 30.571 66.7906 34.41C64.5398 38.2703 60.844 39.6419 56.7382 40.1297C55.3991 40.2888 54.1306 40.3595 53.0247 41.1902C53.0494 40.7095 52.8657 40.3595 52.3534 40.3595C48.813 40.3453 45.262 40.2004 41.9265 41.7735C39.9902 42.6855 35.8633 41.4306 34.6231 39.6242C33.7574 38.3657 34.5701 37.5916 35.5524 37.1214C36.4251 36.7007 37.4498 36.5947 38.4108 36.3472C40.2446 38.1819 43.0784 38.5743 45.4422 37.5173C48.3077 36.2376 50.887 34.5514 53.3038 32.5647C53.9434 32.038 53.9116 31.5148 53.7914 30.8679C53.2332 27.8596 55.5051 25.8835 58.3989 26.8592C61.162 27.7924 61.9428 27.4001 63.1018 24.6887C63.5116 23.7307 63.3102 23.0449 62.4375 22.6596C61.3351 22.1682 60.3104 21.4329 59.0314 21.4082C59.5366 18.9089 60.3246 16.5652 62.3845 14.8401C63.8932 13.5781 64.932 13.9033 65.4832 15.9006C65.9602 17.6257 65.9037 19.3579 65.5362 21.0936L65.5327 21.09ZM56.3708 29.4857C56.2471 29.6413 56.1234 29.7968 55.9962 29.9559C55.5192 29.9453 54.968 29.9135 54.968 30.5745C54.9645 31.5254 55.385 32.2713 56.3284 32.593C57.1728 32.8829 58.0809 33.0985 58.7134 32.2289C59.3882 31.3063 59.4695 30.267 58.8123 29.2913C58.2399 28.4429 57.3283 28.3969 56.4556 28.602C55.9574 28.7222 56.3566 29.1782 56.3708 29.4857Z"
+                                fill="#FF9500" />
+                            <path
+                                d="M41.5449 50.505C41.4955 49.7273 41.7675 49.3314 42.6367 49.3137C44.0077 49.2854 45.2691 49.6849 46.5693 50.0278C48.7247 50.5969 51.0637 51.0812 52.8551 49.3455C54.219 48.0199 55.226 46.2877 55.2684 44.2409C55.2896 43.2511 55.6571 42.4699 56.2401 41.7169C56.4238 41.8548 56.5899 41.9326 56.5863 41.9856C56.127 45.9095 58.2187 49.3738 58.5968 53.1775C58.8477 55.698 57.0987 59.1764 55.2083 60.4243C52.7244 62.0681 50.1875 62.1034 47.3325 61.1702C44.3327 60.191 41.4389 61.3469 39.3649 63.521C37.3085 65.6738 35.2768 68.0352 34.8669 71.238C34.7892 71.846 34.4747 72.2561 33.8458 72.2101C32.8141 72.1394 32.3017 71.3193 32.1215 70.4956C31.8707 69.3503 31.8742 68.0423 32.5809 67.0914C35.0825 63.7296 35.9587 60.0531 35.2485 55.9348C35.0931 55.0263 35.245 54.0648 35.2556 53.1245C35.9411 53.0326 36.1637 53.7502 36.7785 54.0224C36.8633 53.5275 36.9375 53.0926 37.0682 52.3114C37.6618 53.881 39.7041 53.6052 39.8171 55.3339C39.7853 56.8469 39.9514 58.374 39.3295 59.8375C38.8561 60.9581 39.5133 61.0076 40.3789 60.8308C42.1421 60.4703 43.8946 60.0461 45.6613 59.6961C47.8519 59.2648 50.1981 58.8795 51.6043 56.7479C51.8517 56.3732 52.3251 56.0091 51.887 55.5283C51.569 55.1819 51.1273 55.348 50.7351 55.4965C49.1769 56.0833 47.6399 56.7337 46.0535 57.2357C44.8804 57.6069 43.5519 57.773 42.4883 57.1544C41.8665 56.7903 42.3647 55.8676 42.665 55.2278C42.9759 55.0899 43.4247 55.0334 43.4459 54.6339C43.4777 54.0648 42.9229 54.1638 42.5731 54.0259C41.817 53.7325 40.5273 54.4077 40.3365 53.3118C40.174 52.3821 41.4425 52.1948 42.0926 51.6786C43.2056 50.7913 41.6545 50.9398 41.5414 50.5015L41.5449 50.505Z"
+                                fill="#FF9500" />
+                            <path
+                                d="M59.0243 21.4046C60.3034 21.4258 61.3281 22.1647 62.4305 22.656C63.3032 23.0449 63.5046 23.7272 63.0947 24.6851C61.9358 27.3965 61.1585 27.7889 58.3919 26.8557C55.4981 25.88 53.2261 27.8561 53.7844 30.8644C53.9045 31.5113 53.9363 32.0345 53.2968 32.5612C50.88 34.5479 48.3007 36.2341 45.4351 37.5138C43.0713 38.5708 40.2376 38.1784 38.4038 36.3437C41.8665 34.1873 44.7037 31.3487 47.2053 28.1636C48.9049 26.0002 50.7634 24.0064 53.1696 22.6348C53.901 22.2177 53.9116 22.0339 53.4063 21.3728C51.5761 18.9902 52.0213 16.4061 53.3745 13.6311C53.53 13.3165 53.6925 12.9206 54.0918 12.9594C54.5052 13.0019 54.5335 13.4402 54.6324 13.7725C55.279 15.89 56.0987 17.9403 57.1799 19.8704C57.5721 20.5739 57.8336 21.5955 59.0279 21.4011L59.0243 21.4046Z"
+                                fill="#713303" />
+                            <path
+                                d="M42.6686 55.2278C42.3647 55.8676 41.8665 56.7903 42.4919 57.1544C43.5554 57.7765 44.884 57.6069 46.057 57.2357C47.6435 56.7337 49.1805 56.0833 50.7387 55.4964C51.1309 55.348 51.5726 55.1818 51.8906 55.5283C52.3322 56.009 51.8552 56.3731 51.6079 56.7478C50.2016 58.8795 47.859 59.2648 45.6648 59.6961C43.8946 60.0425 42.1456 60.4702 40.3825 60.8308C39.5168 61.0076 38.8561 60.9581 39.3331 59.8375C39.955 58.3704 39.7889 56.8468 39.8207 55.3338C40.7712 55.2985 41.7181 55.2631 42.6686 55.2278Z"
+                                fill="#713303" />
+                            <path
+                                d="M30.0651 22.9317C29.8072 22.9211 29.5457 22.9069 29.2878 22.8963C29.1747 21.8217 29.9414 21.7404 30.8424 21.5919C30.8283 22.253 30.6764 22.709 30.0651 22.9352V22.9317Z"
+                                fill="#FF9500" />
+                            <path
+                                d="M40.28 49.9995C40.5803 50.0455 40.8029 50.1833 40.8736 50.5015C40.2517 50.8338 40.2411 50.4449 40.28 49.9995Z"
+                                fill="#C19775" />
+                            <path
+                                d="M56.3708 29.4856C56.3566 29.1781 55.9574 28.7221 56.4556 28.6019C57.3283 28.3933 58.2399 28.4428 58.8123 29.2912C59.4695 30.2669 59.3882 31.3062 58.7134 32.2288C58.0809 33.0984 57.1764 32.8828 56.3284 32.5929C55.385 32.2713 54.9645 31.5218 54.968 30.5744C54.968 29.9134 55.5192 29.9452 55.9962 29.9558C56.081 30.5638 56.4662 30.7335 56.9891 30.5638C57.1658 30.5073 57.4096 30.2315 57.3954 30.0866C57.3283 29.4856 56.8654 29.4291 56.3708 29.4892V29.4856Z"
+                                fill="#713303" />
+                            <path
+                                d="M56.3708 29.4858C56.8655 29.4292 57.3283 29.4822 57.3955 30.0832C57.4131 30.2316 57.1658 30.5038 56.9891 30.5604C56.4662 30.7301 56.0775 30.5604 55.9963 29.9524C56.1199 29.7968 56.2436 29.6413 56.3708 29.4822V29.4858Z"
+                                fill="#FEFEFE" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="guito">Guito</div>
+            </div>
+            <div class="fa-a-download-para-mac-os">Faça download para macOS</div>
+            <div class="frame-57">
+                <div
+                    class="guito-is-a-desktop-app-designed-to-streamline-your-git-workflow-empowering-you-to-effortlessly-manage-your-projects-with-ease-and-efficiency">
+                    Guito is a desktop app designed to streamline your Git workflow,
+                    empowering you to effortlessly manage your projects with ease and
+                    efficiency.
+                </div>
+            </div>
+            <div class="frame-58">
+                <button onclick="downloadApp()" class="button">
+                    <div class="pull">Download soon</div>
+                </button>
+            </div>
+        </div>
+        <div class="frame-53">
+            <div
+                class="elevate-your-git-experience-with-guito-your-ultimate-desktop-companion-for-seamless-version-control">
+                Elevate your Git experience with Guito: Your ultimate desktop companion
+                for seamless version control.
+            </div>
+            <img class="sidebar-and-content-area-with-toolbar-1" src="TelaAlteracoesLocais.png" />
+        </div>
+        <div class="frame-52">
+            <div class="frame-56">
+                <img class="bota-o-branch" src="BotãoBranch.png" />
+                <div class="frame-496">
+                    <div class="branch-visualization-mastery">
+                        Branch Visualization Mastery
+                    </div>
+                    <div
+                        class="explore-navigate-and-understand-your-project-s-branching-structure-effortlessly-with-guito-s-intuitive-branch-visualization-feature-gain-clarity-make-informed-decisions-and-enhance-collaboration-as-you-delve-into-the-intricate-pathways-of-your-git-repository">
+                        Explore, navigate, and understand your project&#039;s branching
+                        structure effortlessly with Guito&#039;s intuitive Branch
+                        Visualization feature. Gain clarity, make informed decisions, and
+                        enhance collaboration as you delve into the intricate pathways of your
+                        Git repository.
+                    </div>
+                </div>
+            </div>
+            <div class="frame-572">
+                <div class="frame-496">
+                    <div class="effortless-repository-management">
+                        Effortless Repository Management
+                    </div>
+                    <div
+                        class="simplify-your-workflow-and-stay-organized-with-guito-s-repository-management-feature-easily-create-clone-and-manage-repositories-with-a-user-friendly-interface-seamlessly-switch-between-projects-and-repositories-keeping-your-development-journey-smooth-and-efficient">
+                        Simplify your workflow and stay organized with Guito&#039;s Repository
+                        Management feature. Easily create, clone, and manage repositories with
+                        a user-friendly interface. Seamlessly switch between projects and
+                        repositories, keeping your development journey smooth and efficient.
+                    </div>
+                </div>
+                <img class="tela-inicial-full-screen" src="TelaRepositorios.png" />
+            </div>
+            <div class="frame-582">
+                <img class="screenshot-2024-03-27-at-10-04-1" src="Commit.png" />
+                <div class="frame-496">
+                    <div class="streamlined-commit-push-pull">
+                        Streamlined Commit, Push, Pull
+                    </div>
+                    <div
+                        class="accelerate-your-development-process-with-guito-s-streamlined-commit-push-and-pull-feature-effortlessly-commit-your-changes-push-them-to-your-remote-repository-and-pull-latest-updates-with-just-a-few-clicks-stay-focused-on-coding-while-guito-handles-the-rest-ensuring-your-workflow-remains-seamless-and-efficient">
+                        Accelerate your development process with Guito&#039;s streamlined
+                        Commit, Push, and Pull feature. Effortlessly commit your changes, push
+                        them to your remote repository, and pull latest updates with just a
+                        few clicks. Stay focused on coding while Guito handles the rest,
+                        ensuring your workflow remains seamless and efficient.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frame-54">
+            <div class="text-center">
+                <span class="normal-span">Created with love by</span>
+                <span class="link-span"><a href="https://br.linkedin.com/in/carolquiterio"
+                        target="_blank">Carolina</a></span>
+                <span class="normal-span">,</span>
+                <span class="link-span"><a href="https://br.linkedin.com/in/fabrizio-narciso"
+                        target="_blank">Fabrizio</a></span>
+                <span class="normal-span">,</span>
+                <span class="link-span"><a href="https://br.linkedin.com/in/gustavo-sacramento-b48233109"
+                        target="_blank">Gustavo</a></span>
+                <span class="normal-span">,</span>
+                <span class="link-span"><a href="https://br.linkedin.com/in/pedro-henrique-ceccon-88b540128"
+                        target="_blank">Pedro</a></span>
+                <span class="normal-span">, and </span>
+                <span class="link-span"><a href="https://br.linkedin.com/in/silvana-alves"
+                        target="_blank">Silvana</a></span>
+                <span class="normal-span">.</span>
+            </div>
+
+            <div class="_2024-guito-all-rights-reserved">
+                © 2024 Guito. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadApp() {
+            window.location.href = "GitApp Installer converted.dmg";
+        }
+    </script>
+
+</body>
+
+</html>
