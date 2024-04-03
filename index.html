@@ -79,12 +79,12 @@
 
         .guito {
             color: #000000;
-            text-align: left;
             font-size: 44px;
             line-height: 32px;
             font-weight: 400;
             position: relative;
             font-family: 'Varela Round', sans-serif;
+            text-align: center;
         }
 
         .fa-a-download-para-mac-os {
@@ -95,6 +95,7 @@
             line-height: 32px;
             font-weight: 400;
             position: relative;
+            text-align: center;
         }
 
         .frame-57 {
@@ -144,11 +145,16 @@
             overflow: hidden;
             border-style: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
         }
 
         .button:hover {
             transform: translateY(-2px);
             box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:active {
+            transform: scale(0.90);
         }
 
         .pull {
@@ -217,13 +223,6 @@
             position: relative;
         }
 
-        .bota-o-branch {
-            flex-shrink: 0;
-            max-width: 30%;
-            position: relative;
-            object-fit: cover;
-        }
-
         .frame-496 {
             display: flex;
             flex-direction: column;
@@ -234,25 +233,14 @@
             position: relative;
         }
 
-        .branch-visualization-mastery {
+        .feature-title {
             color: #000000;
-            text-align: left;
+            text-align: center;
             font-family: 'Varela Round', sans-serif;
             font-size: var(--title-1-regular-font-size, 22px);
             line-height: var(--title-1-regular-line-height, 26px);
             font-weight: var(--title-1-regular-font-weight, 400);
             position: relative;
-        }
-
-        .explore-navigate-and-understand-your-project-s-branching-structure-effortlessly-with-guito-s-intuitive-branch-visualization-feature-gain-clarity-make-informed-decisions-and-enhance-collaboration-as-you-delve-into-the-intricate-pathways-of-your-git-repository {
-            color: #000000;
-            text-align: center;
-            font-family: "VarelaRound-Regular", sans-serif;
-            font-size: 14px;
-            line-height: 16px;
-            font-weight: 400;
-            position: relative;
-            max-width: 288px;
         }
 
         .frame-572 {
@@ -265,34 +253,6 @@
             position: relative;
         }
 
-        .effortless-repository-management {
-            color: #000000;
-            text-align: left;
-            font-family: 'Varela Round', sans-serif;
-            font-size: var(--title-1-regular-font-size, 22px);
-            line-height: var(--title-1-regular-line-height, 26px);
-            font-weight: var(--title-1-regular-font-weight, 400);
-            position: relative;
-        }
-
-        .simplify-your-workflow-and-stay-organized-with-guito-s-repository-management-feature-easily-create-clone-and-manage-repositories-with-a-user-friendly-interface-seamlessly-switch-between-projects-and-repositories-keeping-your-development-journey-smooth-and-efficient {
-            color: #000000;
-            text-align: center;
-            font-family: 'SF Pro Display', sans-serif;
-            font-size: var(--body-regular-font-size, 16px);
-            line-height: var(--body-regular-line-height, 16px);
-            font-weight: var(--body-regular-font-weight, 400);
-            position: relative;
-            width: 288px;
-        }
-
-        .tela-inicial-full-screen {
-            flex-shrink: 0;
-            max-width: 30%;
-            position: relative;
-            object-fit: cover;
-        }
-
         .frame-582 {
             display: flex;
             flex-direction: row;
@@ -303,24 +263,14 @@
             position: relative;
         }
 
-        .screenshot-2024-03-27-at-10-04-1 {
+        .feature-image {
             flex-shrink: 0;
             max-width: 30%;
             position: relative;
             object-fit: cover;
         }
 
-        .streamlined-commit-push-pull {
-            color: #000000;
-            text-align: left;
-            font-family: 'Varela Round', sans-serif;
-            font-size: var(--title-1-regular-font-size, 22px);
-            line-height: var(--title-1-regular-line-height, 26px);
-            font-weight: var(--title-1-regular-font-weight, 400);
-            position: relative;
-        }
-
-        .accelerate-your-development-process-with-guito-s-streamlined-commit-push-and-pull-feature-effortlessly-commit-your-changes-push-them-to-your-remote-repository-and-pull-latest-updates-with-just-a-few-clicks-stay-focused-on-coding-while-guito-handles-the-rest-ensuring-your-workflow-remains-seamless-and-efficient {
+        .feature-description {
             color: #000000;
             text-align: center;
             font-family: 'SF Pro Display', sans-serif;
@@ -360,6 +310,7 @@
             font-family: 'SF Pro Display';
             font-weight: 700;
             line-height: 16px;
+            text-align: center;
         }
 
         .normal-span {
@@ -368,6 +319,7 @@
             font-family: SF Pro;
             font-weight: 400;
             line-height: 16px;
+            text-align: center;
         }
     </style>
 </head>
@@ -437,13 +389,12 @@
         </div>
         <div class="frame-52">
             <div class="frame-56">
-                <img class="bota-o-branch" src="BotãoBranch.png" />
+                <img class="feature-image" src="BotãoBranch.png" />
                 <div class="frame-496">
-                    <div class="branch-visualization-mastery">
+                    <div class="feature-title">
                         Branch Visualization Mastery
                     </div>
-                    <div
-                        class="explore-navigate-and-understand-your-project-s-branching-structure-effortlessly-with-guito-s-intuitive-branch-visualization-feature-gain-clarity-make-informed-decisions-and-enhance-collaboration-as-you-delve-into-the-intricate-pathways-of-your-git-repository">
+                    <div class="feature-description">
                         Explore, navigate, and understand your project&#039;s branching
                         structure effortlessly with Guito&#039;s intuitive Branch
                         Visualization feature. Gain clarity, make informed decisions, and
@@ -454,27 +405,25 @@
             </div>
             <div class="frame-572">
                 <div class="frame-496">
-                    <div class="effortless-repository-management">
+                    <div class="feature-title">
                         Effortless Repository Management
                     </div>
-                    <div
-                        class="simplify-your-workflow-and-stay-organized-with-guito-s-repository-management-feature-easily-create-clone-and-manage-repositories-with-a-user-friendly-interface-seamlessly-switch-between-projects-and-repositories-keeping-your-development-journey-smooth-and-efficient">
+                    <div class="feature-description">
                         Simplify your workflow and stay organized with Guito&#039;s Repository
                         Management feature. Easily create, clone, and manage repositories with
                         a user-friendly interface. Seamlessly switch between projects and
                         repositories, keeping your development journey smooth and efficient.
                     </div>
                 </div>
-                <img class="tela-inicial-full-screen" src="TelaRepositorios.png" />
+                <img class="feature-image" src="TelaRepositorios.png" />
             </div>
             <div class="frame-582">
-                <img class="screenshot-2024-03-27-at-10-04-1" src="Commit.png" />
+                <img class="feature-image" src="Commit.png" />
                 <div class="frame-496">
-                    <div class="streamlined-commit-push-pull">
+                    <div class="feature-title">
                         Streamlined Commit, Push, Pull
                     </div>
-                    <div
-                        class="accelerate-your-development-process-with-guito-s-streamlined-commit-push-and-pull-feature-effortlessly-commit-your-changes-push-them-to-your-remote-repository-and-pull-latest-updates-with-just-a-few-clicks-stay-focused-on-coding-while-guito-handles-the-rest-ensuring-your-workflow-remains-seamless-and-efficient">
+                    <div class="feature-description">
                         Accelerate your development process with Guito&#039;s streamlined
                         Commit, Push, and Pull feature. Effortlessly commit your changes, push
                         them to your remote repository, and pull latest updates with just a
